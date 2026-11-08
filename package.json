@@ -1,0 +1,22 @@
+{
+  "name": "ptwords",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cf dev",
+    "build": "cf build",
+    "deploy": "cf deploy",
+    "typecheck": "vite build --logLevel warn && tsc -p tsconfig.json && tsc -p tsconfig.worker.json",
+    "dict:fetch": "sh scripts/fetch_data.sh",
+    "dict:build": "mkdir -p out && python3 -I scripts/build_dict.py data/pt.jsonl data/pt_freq.txt out"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^2.0.0-beta.v.12",
+    "cf": "1.0.0-beta.21",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6"
+  },
+  "dependencies": {
+    "hono": "^4.13.17"
+  }
+}

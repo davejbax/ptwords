@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b5d3b">
+<title>Palavras</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon-192.png">
+</head>
+<body>
+<header>
+  <input id="q" type="search" lang="pt-PT" placeholder="Palavra…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" autofocus>
+  <button id="gear" aria-label="Settings">⚙<span id="qn" hidden></span></button>
+</header>
+<div id="st" hidden></div>
+<ul id="r"></ul>
+<div id="toast" role="status" hidden></div>
+<dialog id="cfg"><div class="dh"><b>Anki</b><button id="x" aria-label="Close">×</button></div><div id="cfgb"></div></dialog>
+<script type="module" src="/client/main.ts"></script>
+</body>
+</html>
